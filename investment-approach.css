@@ -1,0 +1,46 @@
+/* Rounded editorial cards with native horizontal scrolling. */
+main{--process-gutter:max(24px,calc((100vw - 1240px)/2))}
+.intro.approach-copy{max-width:1336px;padding:72px 48px 40px}
+.intro.approach-copy>h2:first-child{margin-top:0;font-size:clamp(32px,4vw,48px);max-width:none}
+.intro.approach-copy:not(.approach-details)>h2:first-child{max-width:860px}
+.intro.approach-copy>p{max-width:none}
+.process-carousel{background:#f5f5f7;padding:48px 0 28px}
+.process-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--process-gutter);padding:8px var(--process-gutter) 20px;scrollbar-width:none;overscroll-behavior-x:contain}
+.process-track::-webkit-scrollbar{display:none}
+.process-track:focus-visible{outline:2px solid var(--slate);outline-offset:-3px}
+.process-card{flex:0 0 clamp(320px,38vw,480px);min-width:0;min-height:390px;padding:40px;border-radius:28px;background:#fff;scroll-snap-align:start}
+.process-number{display:block;font-family:'Playfair Display',serif;font-size:18px;font-weight:400;letter-spacing:.06em;color:var(--slate);margin-bottom:20px}
+.process-card h3{font-family:'Playfair Display',serif;font-size:clamp(27px,2.5vw,34px);line-height:1.15;font-weight:400;letter-spacing:-.025em;color:var(--navy);margin:0 0 24px}
+.process-card p{font-size:17px;line-height:1.65;color:var(--mute)}
+.process-controls{display:flex;justify-content:flex-end;gap:16px;padding:12px var(--process-gutter) 0}
+.process-controls button{border:0;border-radius:50%;width:40px;height:40px;background:#e5e5e9;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.process-controls button:hover:not(:disabled){background:#d7dce2}
+.process-controls button:disabled{opacity:.35;cursor:default}
+.process-controls button:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.process-controls svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.intro.approach-details{padding-top:64px;padding-bottom:72px}
+@media(max-width:600px){.intro.approach-copy{padding:48px 24px 32px}.process-carousel{padding-top:24px}.process-track{gap:16px}.process-card{flex-basis:calc(100vw - 64px);min-height:410px;padding:30px 26px;border-radius:24px}.process-card h3{font-size:29px}.intro.approach-details{padding-bottom:48px}}
+
+/* Research invitation, matching the rounded team panel. */
+.research-callout{width:calc(100% - 96px);max-width:1240px;margin:0 auto 64px;padding:76px 48px;background:#f5f5f7;border-radius:32px;text-align:center}
+.research-callout h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;color:var(--navy);line-height:1.25;margin:0 0 26px}
+.research-callout p{font-size:17px;line-height:1.8;color:var(--mute);margin:0}
+.research-callout .actions{margin-top:30px}
+.research-callout a{display:inline-block;color:var(--navy);font-size:16px;text-decoration:none;padding:8px 0}
+.research-callout a:hover{text-decoration:underline}
+@media(max-width:900px){.research-callout{width:calc(100% - 48px);padding:56px 28px;border-radius:26px;margin-bottom:48px}}
+@media(max-width:480px){.research-callout{width:calc(100% - 32px);padding:48px 24px;border-radius:22px}}
+
+/* Compact secondary research invitation. */
+.research-callout{padding:32px 36px;margin-bottom:40px;border-radius:24px}
+.research-callout h2{font-size:28px;margin-bottom:12px}
+.research-callout p{font-size:16px;line-height:1.65}
+.research-callout .actions{margin-top:14px}
+.research-callout a{font-size:15px}
+@media(max-width:600px){.research-callout{padding:28px 24px;border-radius:22px;margin-bottom:32px}.research-callout h2{font-size:26px}}
+
+/* Full-width imagery anchored beneath each card's text. */
+.process-card{display:flex;flex-direction:column;overflow:hidden;padding-bottom:0;min-height:640px}
+.process-card p{flex:1}
+.process-image{display:block;flex:none;width:calc(100% + 80px);max-width:none;height:auto;aspect-ratio:3/2;object-fit:contain;margin:28px -40px 0}
+@media(max-width:600px){.process-card{padding-bottom:0;min-height:600px}.process-image{width:calc(100% + 52px);margin:24px -26px 0}}
