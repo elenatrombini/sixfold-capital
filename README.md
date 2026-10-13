@@ -1,6 +1,6 @@
 # Sixfold Capital
 
-**Website: [elenatrombini.github.io/sixfold-capital](https://elenatrombini.github.io/sixfold-capital/)**
+**Website: [sixfold-capital.github.io](https://sixfold-capital.github.io/)**
 
 Sixfold Capital is the fund created by our team of six for the Asset Management Challenge 2026 at USI Lugano. We combine macroeconomic research with quantitative analysis to build a global multi-asset portfolio.
 
